@@ -5,14 +5,16 @@
 
 Os amplificadores operacionais (amp-op) são componentes eletrônicos fundamentais em circuitos analógicos. Eles são projetados para realizar operações matemáticas como amplificação, soma, subtração, integração e diferenciação. As principais características dos amplificadores operacionais incluem:
 
-- **Ganho de Tensão**: Muito elevado, tipicamente na ordem de 100.000 ou mais.
-- **Impedância de Entrada**: Muito alta, geralmente na ordem de megaohms, para minimizar a corrente que entra no amplificador.
+- **Ganho de Tensão**: Muito elevado, tipicamente na ordem de 100.000 ou mais, permitindo amplificação significativa de sinais de entrada pequenos.
+- **Impedância de Entrada**: Muito alta, geralmente na ordem de megaohms, para minimizar a corrente que entra no amplificador, evitando que ele interfira no circuito de entrada.
 - **Impedância de Saída**: Muito baixa, geralmente na ordem de alguns ohms, para maximizar a transferência de sinal para a carga.
-- **Largura de Banda**: Relativamente ampla, mas o ganho tende a diminuir com o aumento da frequência.
-- **Rejeição de Modo Comum (CMRR)**: Alta, o que significa que o amplificador pode suprimir sinais comuns aos dois terminais de entrada.
-- **Rejeição de Fonte de Alimentação (PSRR)**: Alta, indicando a capacidade do amp-op de rejeitar variações na tensão de alimentação.
-- **Offset de Tensão**: A diferença de tensão que deve ser aplicada entre as entradas para que a saída seja zero.
-- **Taxa de Varredura (Slew Rate)**: A velocidade máxima com que a saída do amplificador pode mudar, medida em volts por microsegundo (V/µs).
+- **Largura de Banda**: Relativamente ampla, mas o ganho tende a diminuir com o aumento da frequência, afetando o desempenho em altas frequências.
+- **Rejeição de Modo Comum (CMRR)**: Alta, o que significa que o amplificador pode suprimir sinais comuns aos dois terminais de entrada, melhorando a precisão em ambientes ruidosos.
+- **Rejeição de Fonte de Alimentação (PSRR)**: Alta, indicando a capacidade do amp-op de rejeitar variações na tensão de alimentação, garantindo uma saída estável.
+- **Offset de Tensão**: A diferença de tensão que deve ser aplicada entre as entradas para que a saída seja zero. Idealmente, esse valor deve ser o menor possível.
+- **Taxa de Varredura (Slew Rate)**: A velocidade máxima com que a saída do amplificador pode mudar, medida em volts por microsegundo (V/µs), importante para sinais de alta frequência.
+
+Para mais detalhes, consulte [Wikipedia - Operational Amplifier](https://en.wikipedia.org/wiki/Operational_amplifier).
 
 ## 2. Amplificador Operacional Ideal
 
@@ -29,44 +31,61 @@ Um amplificador operacional ideal é um modelo teórico que simplifica a anális
 
 Essas características ideais são impossíveis de alcançar na prática, mas fornecem um modelo útil para a compreensão e o design de circuitos com amplificadores operacionais reais.
 
+Para mais detalhes, consulte [Wikipedia - Ideal Operational Amplifier](https://en.wikipedia.org/wiki/Operational_amplifier#Ideal_op-amps).
+
 # UNIDADE 4 - Análise de Circuitos com Amplificadores Operacionais
 
 ## 1. Circuitos Básicos com Amplificadores Operacionais
 
 Os circuitos básicos com amplificadores operacionais incluem:
 
-- **Amplificador Inversor**: Inverte e amplifica o sinal de entrada.
-- **Amplificador Não-Inversor**: Amplifica o sinal de entrada sem inverter sua fase.
+- **Amplificador Inversor**: Inverte e amplifica o sinal de entrada. A relação de ganho é determinada pela razão dos resistores de realimentação e de entrada.
+  - [Exemplo e teoria do amplificador inversor](https://www.electronics-tutorials.ws/opamp/opamp_2.html)
+- **Amplificador Não-Inversor**: Amplifica o sinal de entrada sem inverter sua fase. O ganho é determinado pelos resistores de realimentação.
+  - [Exemplo e teoria do amplificador não-inversor](https://www.electronics-tutorials.ws/opamp/opamp_3.html)
 - **Seguidor de Tensão (Buffer)**: Transfere a tensão de entrada para a saída sem ganho, mas com alta impedância de entrada e baixa impedância de saída.
-- **Integrador**: Produz uma saída proporcional à integral do sinal de entrada.
-- **Diferenciador**: Produz uma saída proporcional à derivada do sinal de entrada.
+  - [Exemplo e teoria do seguidor de tensão](https://www.electronics-tutorials.ws/opamp/opamp_4.html)
+- **Integrador**: Produz uma saída proporcional à integral do sinal de entrada, útil em filtros e controladores.
+  - [Exemplo e teoria do integrador](https://www.electronics-tutorials.ws/opamp/opamp_5.html)
+- **Diferenciador**: Produz uma saída proporcional à derivada do sinal de entrada, usado para detectar mudanças rápidas no sinal.
+  - [Exemplo e teoria do diferenciador](https://www.electronics-tutorials.ws/opamp/opamp_6.html)
 
 ## 2. Comportamento dos Circuitos Básicos Considerando um Ganho Finito
 
 Quando se considera o ganho finito dos amplificadores operacionais reais, algumas características dos circuitos básicos são afetadas:
 
-- **Redução do Ganho Efetivo**: O ganho real é menor que o ideal calculado.
-- **Desvio de Fase**: Há um atraso na resposta do amplificador, especialmente em altas frequências.
-- **Impedância de Entrada e Saída**: A impedância de entrada não é infinitamente alta e a de saída não é zero, afetando a precisão do circuito.
+- **Redução do Ganho Efetivo**: O ganho real é menor que o ideal calculado devido à limitação do amplificador.
+- **Desvio de Fase**: Há um atraso na resposta do amplificador, especialmente em altas frequências, afetando a precisão do sinal de saída.
+- **Impedância de Entrada e Saída**: A impedância de entrada não é infinitamente alta e a de saída não é zero, o que pode introduzir erros no circuito.
+
+Para mais detalhes, consulte [Wikipedia - Practical Considerations for Op-Amps](https://en.wikipedia.org/wiki/Operational_amplifier#Practical_considerations).
 
 ## 3. Circuitos Somadores
 
 Os circuitos somadores (summing amplifiers) utilizam amplificadores operacionais para combinar múltiplos sinais de entrada em uma única saída. Existem dois tipos principais:
 
 - **Somador Inversor**: A soma dos sinais de entrada é invertida e escalada por fatores determinados pelos resistores de entrada.
+  - [Exemplo e teoria do somador inversor](https://www.electronics-tutorials.ws/opamp/opamp_4.html)
 - **Somador Não-Inversor**: Combina múltiplos sinais de entrada sem inversão de fase, embora menos comum que o inversor.
+  - [Exemplo e teoria do somador não-inversor](https://www.allaboutcircuits.com/textbook/semiconductors/chpt-8/multiple-input-op-amp-circuits/)
 
 ## 4. Amplificador Diferencial
 
 O amplificador diferencial amplifica a diferença entre dois sinais de entrada. É utilizado em aplicações onde a rejeição de sinais de modo comum (ruído comum a ambas as entradas) é importante.
 
+- [Exemplo e teoria do amplificador diferencial](https://www.electronics-tutorials.ws/opamp/opamp_5.html)
+
 ## 5. Amplificador de Instrumentação
 
 O amplificador de instrumentação é uma configuração de amplificador operacional que oferece alta impedância de entrada, alta rejeição de modo comum e ganho preciso e estável. É amplamente utilizado em aplicações médicas e de medição onde a precisão é crucial.
 
+- [Exemplo e teoria do amplificador de instrumentação](https://www.electronics-tutorials.ws/opamp/opamp_6.html)
+
 ## 6. Filtros Ativos
 
 Filtros ativos utilizam amplificadores operacionais para realizar funções de filtragem (passa-baixa, passa-alta, passa-banda e rejeita-banda) com ganhos ajustáveis e sem a necessidade de indutores, que são componentes volumosos e caros.
+
+- [Exemplo e teoria de filtros ativos](https://www.electronics-tutorials.ws/filter/filter_5.html)
 
 ## 7. Projeto e Análise de Filtros Ativos
 
@@ -78,7 +97,7 @@ Para projetar e analisar filtros ativos, consideramos os seguintes passos:
 - **Simulação**: Usar software de simulação para verificar o comportamento do filtro antes da implementação prática.
 - **Montagem e Teste**: Montar o circuito em uma protoboard ou PCB e testar para garantir que atende às especificações desejadas.
 
-Este conteúdo fornece uma base sólida para o entendimento e o projeto de circuitos utilizando amplificadores operacionais, cobrindo desde conceitos básicos até aplicações avançadas em filtragem e instrumentação.
+Para mais detalhes, consulte [Wikipedia - Active Filter Design](https://en.wikipedia.org/wiki/Active_filter).
 
 # UNIDADE 5 - Conversores Analógico/Digital e Digital/Analógico
 
@@ -87,12 +106,16 @@ Este conteúdo fornece uma base sólida para o entendimento e o projeto de circu
 Os conversores A/D são componentes eletrônicos que transformam sinais analógicos contínuos em dados digitais discretos. Suas principais características incluem:
 
 - **Resolução**: Determinada pelo número de bits do conversor, define a quantidade de níveis discretos que o conversor pode representar. Por exemplo, um conversor de 8 bits pode representar 256 níveis diferentes.
-- **Taxa de Amostragem**: A frequência com que o sinal analógico é amostrado e convertido em digital, geralmente medida em amostras por segundo (SPS).
+- **Taxa de Amostragem**: A frequência com que o sinal analógico é amostrado e convertido em digital, geralmente medida em amost
+
+ras por segundo (SPS).
 - **Tempo de Conversão**: O tempo necessário para converter um sinal analógico em digital.
 - **Precisão**: A exatidão com que o valor digital representa o sinal analógico original, influenciada pela resolução e pela linearidade do conversor.
 - **Faixa de Entrada**: O intervalo de tensões analógicas que o conversor pode processar.
 - **Linearidade**: Mede a diferença entre a saída ideal e a real do conversor ao longo de toda a faixa de entrada.
 - **Erro de Quantização**: A diferença entre o sinal analógico real e o sinal digital convertido, causado pela natureza discreta da representação digital.
+
+Para mais detalhes, consulte [Wikipedia - Analog-to-Digital Converter](https://en.wikipedia.org/wiki/Analog-to-digital_converter).
 
 ## 2. Principais Características do Conversor Digital/Analógico (D/A)
 
@@ -105,6 +128,8 @@ Os conversores D/A realizam a função inversa, transformando dados digitais em 
 - **Precisão**: Influenciada pela resolução, linearidade e estabilidade do conversor.
 - **Erro de Quantização**: A diferença entre o valor analógico real gerado e o valor ideal, causado pela natureza discreta da entrada digital.
 
+Para mais detalhes, consulte [Wikipedia - Digital-to-Analog Converter](https://en.wikipedia.org/wiki/Digital-to-analog_converter).
+
 ## 3. Exemplos de Circuitos com A/D e D/A
 
 ### Conversores A/D
@@ -112,9 +137,7 @@ Os conversores D/A realizam a função inversa, transformando dados digitais em 
 1. **Conversor A/D de Aproximação Sucessiva (SAR ADC)**: Utiliza um comparador e um registro de aproximação sucessiva para converter um sinal analógico em digital de forma eficiente. Muito usado em aplicações onde a precisão e a velocidade são importantes.
    - [Mais sobre SAR ADC](https://en.wikipedia.org/wiki/Successive_approximation_ADC)
    
-2. **Conversor A/D Delta-Sigma (ΔΣ ADC)**: Utiliza um modulador delta-sigma para amostrar o sinal analógico a uma taxa muito alta e, em seguida, aplica filtros digitais para obter a resolução desejada. É ideal para aplicações que requer
-
-em alta precisão e baixo ruído.
+2. **Conversor A/D Delta-Sigma (ΔΣ ADC)**: Utiliza um modulador delta-sigma para amostrar o sinal analógico a uma taxa muito alta e, em seguida, aplica filtros digitais para obter a resolução desejada. É ideal para aplicações que requerem alta precisão e baixo ruído.
    - [Mais sobre Delta-Sigma ADC](https://en.wikipedia.org/wiki/Delta-sigma_modulation)
 
 ### Circuitos com A/D
@@ -217,7 +240,9 @@ Um LDR pode ser utilizado em um circuito divisor de tensão para medir a intensi
 - O LDR e o resistor são conectados em série entre a tensão de alimentação (Vcc) e o terra.
 - O ponto de junção entre o LDR e o resistor é conectado a uma entrada ADC do microcontrolador.
 - A resistência do LDR varia com a intensidade da luz, alterando a tensão no ponto de junção.
-- O microcontrolador lê esta tensão e a converte em uma leitura da intensidade da luz.
+- O microcontrolador lê esta tensão e a converte em uma leitura da
+
+ intensidade da luz.
 
 #### Referência:
 - [Exemplo de circuito com LDR](https://www.electronics-tutorials.ws/io/light-dependent-resistor.html)
@@ -262,4 +287,3 @@ Um sensor PIR pode ser usado para detectar a presença de movimento em uma área
 - [Exemplo de circuito com sensor PIR](https://randomnerdtutorials.com/pir-motion-sensor-detecting-motion-with-arduino/)
 
 Este guia detalhado deve ajudar você a entender os diferentes tipos de sensores e como utilizá-los em circuitos práticos. Para mais detalhes, siga os links fornecidos e explore os recursos disponíveis.
-
