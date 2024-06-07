@@ -1,4 +1,15 @@
+.texto-padrao {
+    color: #333;
+    letter-spacing: 2px;
+    line-height: 2;
+    text-decoration: underline;
+    text-align: center;
+}
 
+<p class="texto-padrao">
+    Texto é o coração da web. Conteúdo atualmente é um dos maiores
+    indicadores de sucesso de uma página.
+</p>
 # UNIDADE 3 - Amplificador Operacional
 
 ## 1. Principais Características do Amplificador Operacional
