@@ -1,4 +1,4 @@
-```markdown
+
 # UNIDADE 3 - Amplificador Operacional
 
 ## 1. Principais Características do Amplificador Operacional
@@ -262,4 +262,4 @@ Um sensor PIR pode ser usado para detectar a presença de movimento em uma área
 - [Exemplo de circuito com sensor PIR](https://randomnerdtutorials.com/pir-motion-sensor-detecting-motion-with-arduino/)
 
 Este guia detalhado deve ajudar você a entender os diferentes tipos de sensores e como utilizá-los em circuitos práticos. Para mais detalhes, siga os links fornecidos e explore os recursos disponíveis.
-```
+
