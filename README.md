@@ -99,7 +99,7 @@ Para projetar e analisar filtros ativos, consideramos os seguintes passos:
 
 Para mais detalhes, consulte [Wikipedia - Active Filter Design](https://en.wikipedia.org/wiki/Active_filter).
 ```html
-
+<!--
 # UNIDADE 5 - Conversores Analógico/Digital e Digital/Analógico
 
 ## 1. Principais Características do Conversor Analógico/Digital (A/D)
@@ -288,5 +288,5 @@ Um sensor PIR pode ser usado para detectar a presença de movimento em uma área
 - [Exemplo de circuito com sensor PIR](https://randomnerdtutorials.com/pir-motion-sensor-detecting-motion-with-arduino/)
 
 Este guia detalhado deve ajudar você a entender os diferentes tipos de sensores e como utilizá-los em circuitos práticos. Para mais detalhes, siga os links fornecidos e explore os recursos disponíveis.
-
+-->
 ```
