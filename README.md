@@ -1,10 +1,4 @@
 
-<p style="color: #333; letter-spacing: 2px; line-height: 2; text-decoration: underline; text-align: center;">
-    Texto é o coração da web. Conteúdo atualmente é um dos maiores
-    indicadores de sucesso de uma página.
-</p>
-
-
 # UNIDADE 3 - Amplificador Operacional
 
 ## 1. Principais Características do Amplificador Operacional
@@ -104,7 +98,7 @@ Para projetar e analisar filtros ativos, consideramos os seguintes passos:
 - **Montagem e Teste**: Montar o circuito em uma protoboard ou PCB e testar para garantir que atende às especificações desejadas.
 
 Para mais detalhes, consulte [Wikipedia - Active Filter Design](https://en.wikipedia.org/wiki/Active_filter).
-<div style="opacity: 0.5;">
+```c
 # UNIDADE 5 - Conversores Analógico/Digital e Digital/Analógico
 
 ## 1. Principais Características do Conversor Analógico/Digital (A/D)
@@ -293,4 +287,4 @@ Um sensor PIR pode ser usado para detectar a presença de movimento em uma área
 - [Exemplo de circuito com sensor PIR](https://randomnerdtutorials.com/pir-motion-sensor-detecting-motion-with-arduino/)
 
 Este guia detalhado deve ajudar você a entender os diferentes tipos de sensores e como utilizá-los em circuitos práticos. Para mais detalhes, siga os links fornecidos e explore os recursos disponíveis.
-</div>
+```
